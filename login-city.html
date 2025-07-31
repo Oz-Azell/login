@@ -5,7 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<!--icon link-->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <!-- Google Font (fallback used if custom font fails) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +34,7 @@
       height: 100%;
       width: 100%;
       background: url(pic/pex.jpg) no-repeat center center/cover;
-      filter: blur(2px);
+      filter: blur(4px);
       z-index: -2;
     }
     .box {
@@ -48,6 +49,8 @@
     a {
       text-decoration: none;
       color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
     }
 
     .line {
@@ -98,8 +101,8 @@
     .b-login {
       width: 25%;
       padding: 25px;
-      background-color: rgba(0, 0, 0, 0.6);
-      background-color: rgba(0, 0, 0, 0);
+
+
       border-radius: 10px;
     }
 
@@ -143,6 +146,22 @@
     a:hover {
       text-decoration: underline;
     }
+    .box{
+      margin-top: 60px;
+    }
+
+.icon{
+  text-align: center;
+  padding: 10px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  font-size: 30px;
+background-color: #007bff;
+}
+
+
   </style>
 </head>
 
@@ -166,16 +185,31 @@
     <div class="b1">
       <div class="b-text">
         <h1>Welcome</h1>
-        <p>Login to your account to continue enjoying our services. If you don't have an account.</p>
-        <p>We are here to help you with any issues you may face. Feel free to reach out.</p>
+        <h3>Login to your account to continue enjoying our services. If you don't have an account.</h3>
+        <h4>We are here to help you with any issues you may face. Feel free to reach out.</h4>
       <ul>
         <li>Access exclusive content</li>
         <li>Manage your profile</li>
         <li>Stay updated with the latest news</li>
         <li>Connect with other users</li>
       </ul>
-      
-      
+      <br>
+      <h4>1.
+Paysage (du point de vue de l'esthétique, du pittoresque).</h4>
+<h4>2. Configuration d'un lieu (en rapport avec son utilisation par un groupe humain).</h4>
+      <br>
+      <div class="icon">
+        <!-- Facebook Icon -->
+<i class="fab fa-facebook"></i>
+
+<!-- Instagram Icon -->
+<i class="fab fa-instagram"></i>
+
+<!-- Google Icon -->
+<i class="fab fa-google"></i>
+
+      </div>
+<br>
       
       
       </div>
@@ -185,6 +219,7 @@
           <img src="pic/utilisateur.png" alt="User Icon" style="width: 100px; height: 100px; border-radius: 50%;">
           <h1>Login</h1>
           <form>
+            <br>
             <input id="username" class="in" type="text" placeholder="Username">
             <input id="userpassword" class="in" type="password" placeholder="Password">
             <button id="btn" type="submit">Login</button>
