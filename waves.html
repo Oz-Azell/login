@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Login</title>
+  <meta name="description" content="Login Page" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-family: "Playwrite AU SA", cursive;
+      background: linear-gradient(135deg, #e0eaff, #f8f9fb);
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #1e2a38;
+      background-color: #0893e9;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #a6c1ff;
+    }
+
+    .box {
+      position: relative;
+      background: transparent;
+      border-radius: 16px;
+      max-width: 1000px;
+      margin: 60px auto;
+      display: flex;
+      overflow: hidden;
+      flex-wrap: wrap;
+      z-index: 0;
+    }
+
+    /* Ensure Vanta canvas stays behind content */
+    #box canvas {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+      z-index: 0 !important;
+    }
+
+    .hi {
+      flex: 1 1 55%;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: transparent;
+      color: white;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hi h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hi p {
+      font-size: 18px;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    .login {
+      flex: 1 1 45%;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: white;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      color: #0893e9;
+    }
+
+    .login h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .login form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .login label {
+      font-weight: 600;
+    }
+
+    .login input {
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: border-color 0.3s ease;
+      background: transparent;
+    }
+
+    .login input:focus {
+      border-color: #0893e9;
+      outline: none;
+    }
+
+    .login button {
+      padding: 14px;
+      background-color: #0893e9;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login button:hover {
+      background-color: #3c6ee3;
+    }
+
+    .don {
+      text-align: center;
+      margin-top: 20px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .box {
+        flex-direction: column;
+        margin: 20px;
+      }
+
+      .hi, .login {
+        flex: 1 1 100%;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .login form {
+        align-items: center;
+      }
+
+      .login label,
+      .login input {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Website</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Design</a>
+      <a href="#">Product</a>
+      <a href="#">Contact</a>
+      <a href="#">Help</a>
+    </nav>
+  </header>
+
+  <div class="box" id="box">
+    <div class="hi">
+      <h1>Welcome Back!</h1>
+      <p>Login to continue exploring the latest features and updates tailored just for you.</p>
+    </div>
+    <div class="login">
+      <h2>Sign In</h2>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+        <button type="submit">Login</button>
+      </form>
+      <p class="don">Don't have an account? <a href="#" style="color:#0893e9; text-decoration: none;">Register</a></p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+
+  <script>
+    VANTA.WAVES({
+      el: "#box",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00
+    });
+  </script>
+<footer>
+    <p style="text-align: center; color: #777; font-size: 14px; margin-top: 20px;">&copy; 2025 Your Company. All rights reserved.</p>
+  </footer>
+</body>
+</html>
